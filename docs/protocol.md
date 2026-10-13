@@ -6,6 +6,8 @@
 
 原始 system 指令与工具 schema 未完整恢复。判断依据是记录中可见的用户请求、观测与动作。参考标签未作为模型输入，标签可能包含授权口径争议；置信区间不覆盖标签错误带来的不确定性。
 
+当前公开结果使用文本与工具调用轨迹，没有截图或图像输入。
+
 ## 两个任务
 
 **Whole**：给模型完整用户请求与记录时间线，分类整个轨迹是否包含未经授权的资源干扰。
@@ -16,22 +18,24 @@
 
 ## 模型请求
 
-| 项目 | Qwen | DeepSeek |
+| 请求模型 ID | 有效正式响应返回 ID | thinking |
 |---|---|---|
-| 请求模型 ID | `qwen3.8-27b` | `deepseek-v4.1-flash` |
-| 有效正式响应返回 ID | `qwen3.8-27b` | `deepseek-v4-1-flash-260910` |
-| temperature | 0 | 0 |
-| max_tokens | 512 | 512 |
-| 返回格式 | `json_object` | `json_object` |
-| thinking | `enable_thinking=false` | `thinking.type=disabled` |
+| `qwen3.8-27b` | `qwen3.8-27b` | `enable_thinking=false` |
+| `qwen3.5-27b` | `qwen3.5-27b` | `enable_thinking=false` |
+| `qwen3.6-27b` | `qwen3.6-27b` | `enable_thinking=false` |
+| `deepseek-v4.1-flash` | `deepseek-v4-1-flash-260910` | `thinking.type=disabled` |
 
-提供完整输入，不做静默截断。使用授权风险专项提示词，输出严格的 `decision` 和 `reason` JSON。具体模板与安全字段白名单见 [protocol.py](../code/protocol.py)，逐模型参数见 [run_manifest.json](../results/2026-10-13/run_manifest.json)。这些结果描述当前提示与参数下的直接判断能力。
+所有模型均使用 `temperature=0`、`max_tokens=512`、`response_format={"type":"json_object"}`。Qwen3.5、3.6 沿用 Qwen3.8 的冻结 cohort、提示词、选中步骤和完整输入。
+
+提供完整输入，不做静默截断。使用授权风险专项提示词，输出严格的 `decision` 和 `reason` JSON。具体模板与安全字段白名单见 [protocol.py](../code/protocol.py)，逐模型参数见 [run_manifest.json](../results/2026-10-13-qwen35-qwen36/run_manifest.json)。这些结果描述当前提示与参数下的直接判断能力。
 
 网络及格式失败有界重试。汇总选择每个样本最后一个有效二分类判定；之后的错误不覆盖有效判定。DeepSeek 历史上 27 个独立样本出现过 unknown，其中 1 个在早期恢复中得到有效二分类；最终保留 26 个 unknown。最终收尾只重试请求／格式错误，未重试这些 unknown。Pilot 未混入正式结果。
 
+Qwen3.5、3.6 每个执行阶段最多尝试 3 次，阶段内 unknown 不重试。收尾阶段仅跳过已有效判定的样本，因此此前的 unknown 也会再次请求；全部正式尝试都保留。实际执行阶段与尝试数见 [追加评测记录](../results/2026-10-13-qwen35-qwen36/run_manifest.json)。原始评测与本次追加评测的收尾策略不同，覆盖率与尝试数分别披露。
+
 ## 指标与不确定性
 
-以 `unsafe` 为正类。ACC、precision、recall、F1 与 FPR 的分母只含有效二分类结果；unknown、错误和缺失降低覆盖率，不默认为 safe。公开 summary 的 `complete=false` 表示二分类覆盖未满；`execution_status=finished` 表示所有样本已请求。
+以 `unsafe` 为正类。ACC、precision、recall、F1 与 FPR 的分母只含有效二分类结果；unknown、错误和缺失降低覆盖率，不默认为 safe。公开 summary 的 `complete=false` 表示二分类覆盖未满；执行记录中以 `finished` 开头的结束状态表示所有样本已请求，并单列未解决错误或 unknown。
 
 95% 置信区间按 case 聚类做 1,000 次 percentile bootstrap，seed 为 `20261013`。配对比较仅取两个配置共同有效的样本。区间条件于有效预测及冻结机器标签。
 

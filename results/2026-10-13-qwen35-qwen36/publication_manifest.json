@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "source_audit_date": "2026-10-13T15:59:33.675995+00:00",
+  "snapshot": "2026-10-13-qwen35-qwen36",
+  "public_repository": "LiYu0524/vl-guard-eval",
+  "publication_status": "finalized",
+  "exported_cases": 9180,
+  "exported_case_clusters": 233,
+  "models": {
+    "qwen3.8-27b": {
+      "state": "finalized",
+      "exported": true,
+      "attempt_rows": 19159,
+      "status_counts": {
+        "request_error": 784,
+        "predicted": 18360,
+        "parse_error": 15
+      },
+      "final_valid_samples": 18360,
+      "final_by_mode": {
+        "whole": {
+          "expected": 9180,
+          "evaluated": 9180,
+          "coverage": 1.0,
+          "unknown_samples": 0,
+          "failure_samples": 0,
+          "missing_samples": 0
+        },
+        "step": {
+          "expected": 9180,
+          "evaluated": 9180,
+          "coverage": 1.0,
+          "unknown_samples": 0,
+          "failure_samples": 0,
+          "missing_samples": 0
+        }
+      }
+    },
+    "deepseek-v4.1-flash": {
+      "state": "finalized",
+      "exported": true,
+      "attempt_rows": 19140,
+      "status_counts": {
+        "request_error": 672,
+        "predicted": 18316,
+        "unknown": 31,
+        "parse_error": 121
+      },
+      "final_valid_samples": 18316,
+      "final_by_mode": {
+        "whole": {
+          "expected": 9180,
+          "evaluated": 9147,
+          "coverage": 0.99640522875817,
+          "unknown_samples": 19,
+          "failure_samples": 14,
+          "missing_samples": 0
+        },
+        "step": {
+          "expected": 9180,
+          "evaluated": 9169,
+          "coverage": 0.99880174291939,
+          "unknown_samples": 7,
+          "failure_samples": 4,
+          "missing_samples": 0
+        }
+      }
+    },
+    "qwen3.5-27b": {
+      "state": "finalized",
+      "exported": true,
+      "attempt_rows": 27020,
+      "status_counts": {
+        "predicted": 18357,
+        "request_error": 5917,
+        "unknown": 14,
+        "parse_error": 2731,
+        "output_truncated": 1
+      },
+      "final_valid_samples": 18357,
+      "final_by_mode": {
+        "whole": {
+          "expected": 9180,
+          "evaluated": 9178,
+          "coverage": 0.9997821350762527,
+          "unknown_samples": 2,
+          "failure_samples": 0,
+          "missing_samples": 0
+        },
+        "step": {
+          "expected": 9180,
+          "evaluated": 9179,
+          "coverage": 0.9998910675381264,
+          "unknown_samples": 1,
+          "failure_samples": 0,
+          "missing_samples": 0
+        }
+      }
+    },
+    "qwen3.6-27b": {
+      "state": "finalized",
+      "exported": true,
+      "attempt_rows": 21286,
+      "status_counts": {
+        "predicted": 18360,
+        "request_error": 2924,
+        "parse_error": 2
+      },
+      "final_valid_samples": 18360,
+      "final_by_mode": {
+        "whole": {
+          "expected": 9180,
+          "evaluated": 9180,
+          "coverage": 1.0,
+          "unknown_samples": 0,
+          "failure_samples": 0,
+          "missing_samples": 0
+        },
+        "step": {
+          "expected": 9180,
+          "evaluated": 9180,
+          "coverage": 1.0,
+          "unknown_samples": 0,
+          "failure_samples": 0,
+          "missing_samples": 0
+        }
+      }
+    }
+  },
+  "total_formal_attempt_rows": 86605,
+  "source_final_counts_independently_audited": true,
+  "new_model_inference_run_for_publication": true,
+  "newly_evaluated_models": [
+    "qwen3.5-27b",
+    "qwen3.6-27b"
+  ],
+  "identifiers_anonymized": true,
+  "stable_existing_aliases_reused": true,
+  "original_attempt_order_preserved": true,
+  "source_attempt_index_base": 1,
+  "raw_input_and_response_text_published": false,
+  "credentials_published": false,
+  "id_mapping_published": false,
+  "attempt_export_fields": [
+    "mode",
+    "label",
+    "selected_step",
+    "requested_model",
+    "returned_model",
+    "decision",
+    "status",
+    "attempt",
+    "usage",
+    "finish_reason",
+    "http_status",
+    "latency_seconds",
+    "trace_id",
+    "case",
+    "sample_id",
+    "source_attempt_index"
+  ],
+  "pilot_attempts_published": false,
+  "format_diagnostic_attempts_published": false,
+  "pilots_and_diagnostics_in_statistics": false,
+  "qwen3.5_bounded_finalization_policy": {
+    "recorded_during": "cleanup1",
+    "recorded_before": [
+      "cleanup2 decision",
+      "cleanup3 decision",
+      "final accuracy"
+    ],
+    "initial_full_pass_max_attempts_per_sample": 3,
+    "max_resume_cleanup_stages": 3,
+    "cleanup_concurrency_per_stage": 64,
+    "max_attempts_per_unresolved_sample_per_cleanup_stage": 3,
+    "theoretical_max_total_attempts_per_sample": 12,
+    "actual_cleanup_stages_used": 3,
+    "observed_max_total_attempts_per_sample": 8,
+    "generation_settings_unchanged": true,
+    "already_valid_binary_samples_skipped": true,
+    "stop_early_when_all_samples_valid": true,
+    "at_budget_exhaustion": "Finalize and publish remaining unknown/errors and actual coverage; unresolved samples are not treated as safe.",
+    "final_stopping_reason": "Three allowed cleanup stages completed; 3 unknown samples remain.",
+    "scope": "Qwen3.5 formal full pass and bounded resume stages; pilots excluded."
+  },
+  "historical_snapshot_modified": false,
+  "statistics": {
+    "bootstrap": {
+      "method": "case-cluster percentile bootstrap",
+      "replicates": 1000,
+      "seed": 20261013,
+      "confidence": 0.95
+    },
+    "comparison_rows": 12,
+    "paired_groups": 28,
+    "paired_metric_rows": 140,
+    "statistics_reproduction_verified": true,
+    "verification_checks": 2956,
+    "absolute_tolerance": 1e-12,
+    "old_model_baseline_and_pair_statistics_exactly_unchanged": true
+  },
+  "reproduction_command": "python3 scripts/reproduce.py --models qwen3.8-27b deepseek-v4.1-flash qwen3.5-27b qwen3.6-27b --nboot 1000 --seed 20261013 --reference-summary results/2026-10-13-qwen35-qwen36/summary.json --output-dir reproduction/qwen35_qwen36_finalcheck"
+}

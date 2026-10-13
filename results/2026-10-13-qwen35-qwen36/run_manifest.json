@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-13T15:59:33.675995+00:00",
+  "evaluation_date": "2026-10-13",
+  "snapshot": "2026-10-13-qwen35-qwen36",
+  "execution_status": "finished_with_abstentions",
+  "all_models_finalized": true,
+  "binary_coverage_complete": false,
+  "requested_models": [
+    "qwen3.8-27b",
+    "deepseek-v4.1-flash",
+    "qwen3.5-27b",
+    "qwen3.6-27b"
+  ],
+  "cases": 9180,
+  "case_clusters": 233,
+  "unsafe": 3706,
+  "safe": 5474,
+  "whole_samples_per_model": 9180,
+  "step_samples_per_model": 9180,
+  "cohort": "data/cohort.jsonl",
+  "cohort_and_selection": "Frozen cohort and selected steps are identical to the 2026-10-13 Qwen3.8/DeepSeek snapshot; no label or step reselection.",
+  "temperature": 0,
+  "max_tokens": 512,
+  "request_options": {
+    "qwen3.8-27b": {
+      "enable_thinking": false,
+      "response_format": {
+        "type": "json_object"
+      }
+    },
+    "deepseek-v4.1-flash": {
+      "thinking": {
+        "type": "disabled"
+      },
+      "response_format": {
+        "type": "json_object"
+      }
+    },
+    "qwen3.5-27b": {
+      "enable_thinking": false,
+      "response_format": {
+        "type": "json_object"
+      }
+    },
+    "qwen3.6-27b": {
+      "enable_thinking": false,
+      "response_format": {
+        "type": "json_object"
+      }
+    }
+  },
+  "thinking": "disabled explicitly; evaluates prompt-conditioned direct judgment, not maximum reasoning capability",
+  "input_truncation": false,
+  "risk": "unauthorized interference with incumbent workload/resources",
+  "reference_model": "glm-5.3-flash",
+  "reference_limitation": "Historical machine-generated annotations; not human gold.",
+  "pilot_samples_excluded_from_formal_results": true,
+  "format_diagnostic_attempts_excluded": true,
+  "new_model_execution": {
+    "qwen3.5-27b": {
+      "state": "finished_with_abstentions",
+      "phases": {
+        "full": {
+          "state": "finished_with_errors",
+          "started_at": "2026-10-13T13:55:53.512716+00:00",
+          "updated_at": "2026-10-13T15:26:39.846196+00:00",
+          "samples_seen": 18360,
+          "samples_submitted": 18360,
+          "samples_completed": 16822,
+          "samples_skipped_resume": 0,
+          "samples_failed": 1533,
+          "samples_abstained": 5,
+          "samples_interrupted": 0,
+          "attempts": 25036,
+          "concurrency": 256,
+          "timeout_seconds": 240.0,
+          "attempt_limit": 3,
+          "enumeration_complete": true,
+          "valid_predictions_added": 16822,
+          "attempt_status_counts": {
+            "predicted": 16822,
+            "request_error": 5915,
+            "unknown": 5,
+            "parse_error": 2294
+          }
+        },
+        "cleanup1": {
+          "state": "finished_with_errors",
+          "started_at": "2026-10-13T15:27:37.103913+00:00",
+          "updated_at": "2026-10-13T15:35:28.677017+00:00",
+          "samples_seen": 18360,
+          "samples_submitted": 1538,
+          "samples_completed": 18307,
+          "samples_skipped_resume": 16822,
+          "samples_failed": 50,
+          "samples_abstained": 3,
+          "samples_interrupted": 0,
+          "attempts": 1899,
+          "concurrency": 64,
+          "timeout_seconds": 240.0,
+          "attempt_limit": 3,
+          "enumeration_complete": true,
+          "valid_predictions_added": 1485,
+          "attempt_status_counts": {
+            "predicted": 1485,
+            "parse_error": 410,
+            "unknown": 3,
+            "output_truncated": 1
+          }
+        },
+        "cleanup2": {
+          "state": "finished_with_abstentions",
+          "started_at": "2026-10-13T15:37:44.108490+00:00",
+          "updated_at": "2026-10-13T15:41:52.398796+00:00",
+          "samples_seen": 18360,
+          "samples_submitted": 53,
+          "samples_completed": 18357,
+          "samples_skipped_resume": 18307,
+          "samples_failed": 0,
+          "samples_abstained": 3,
+          "samples_interrupted": 0,
+          "attempts": 82,
+          "concurrency": 64,
+          "timeout_seconds": 240.0,
+          "attempt_limit": 3,
+          "enumeration_complete": true,
+          "valid_predictions_added": 50,
+          "attempt_status_counts": {
+            "predicted": 50,
+            "unknown": 3,
+            "parse_error": 27,
+            "request_error": 2
+          }
+        },
+        "cleanup3": {
+          "state": "finished_with_abstentions",
+          "started_at": "2026-10-13T15:42:24.291310+00:00",
+          "updated_at": "2026-10-13T15:42:32.860310+00:00",
+          "samples_seen": 18360,
+          "samples_submitted": 3,
+          "samples_completed": 18357,
+          "samples_skipped_resume": 18357,
+          "samples_failed": 0,
+          "samples_abstained": 3,
+          "samples_interrupted": 0,
+          "attempts": 3,
+          "concurrency": 64,
+          "timeout_seconds": 240.0,
+          "attempt_limit": 3,
+          "enumeration_complete": true,
+          "valid_predictions_added": 0,
+          "attempt_status_counts": {
+            "unknown": 3
+          }
+        }
+      },
+      "formal_attempt_rows": 27020,
+      "final_valid_samples": 18357,
+      "final_unknown_samples": 3,
+      "final_failure_samples": 0,
+      "final_missing_samples": 0,
+      "final_coverage_by_mode": {
+        "whole": {
+          "expected": 9180,
+          "evaluated": 9178,
+          "coverage": 0.9997821350762527,
+          "positive_expected": 3706,
+          "positive_evaluated": 3706,
+          "positive_coverage": 1.0,
+          "negative_expected": 5474,
+          "negative_evaluated": 5472,
+          "negative_coverage": 0.999634636463281,
+          "unknown_samples": 2,
+          "failure_samples": 0,
+          "missing_samples": 0
+        },
+        "step": {
+          "expected": 9180,
+          "evaluated": 9179,
+          "coverage": 0.9998910675381264,
+          "positive_expected": 3706,
+          "positive_evaluated": 3705,
+          "positive_coverage": 0.9997301672962763,
+          "negative_expected": 5474,
+          "negative_evaluated": 5474,
+          "negative_coverage": 1.0,
+          "unknown_samples": 1,
+          "failure_samples": 0,
+          "missing_samples": 0
+        }
+      },
+      "finalized_at": "2026-10-13T15:42:32.860310+00:00",
+      "observed_max_total_attempts_per_sample": 8,
+      "cleanup_policy": {
+        "recorded_during": "cleanup1",
+        "recorded_before": [
+          "cleanup2 decision",
+          "cleanup3 decision",
+          "final accuracy"
+        ],
+        "initial_full_pass_max_attempts_per_sample": 3,
+        "max_resume_cleanup_stages": 3,
+        "cleanup_concurrency_per_stage": 64,
+        "max_attempts_per_unresolved_sample_per_cleanup_stage": 3,
+        "theoretical_max_total_attempts_per_sample": 12,
+        "actual_cleanup_stages_used": 3,
+        "observed_max_total_attempts_per_sample": 8,
+        "generation_settings_unchanged": true,
+        "already_valid_binary_samples_skipped": true,
+        "stop_early_when_all_samples_valid": true,
+        "at_budget_exhaustion": "Finalize and publish remaining unknown/errors and actual coverage; unresolved samples are not treated as safe.",
+        "final_stopping_reason": "Three allowed cleanup stages completed; 3 unknown samples remain.",
+        "scope": "Qwen3.5 formal full pass and bounded resume stages; pilots excluded."
+      },
+      "format_note": "JSON mode retains strict decision/reason validation. Format failures and one truncated response remain in the formal attempt history, but final unresolved samples are three explicit unknown answers. Diagnostic pilots are excluded from predictions and statistics."
+    },
+    "qwen3.6-27b": {
+      "state": "finished",
+      "phases": {
+        "full": {
+          "state": "finished_with_errors",
+          "started_at": "2026-10-13T13:55:53.512805+00:00",
+          "updated_at": "2026-10-13T14:51:35.130142+00:00",
+          "samples_seen": 18360,
+          "samples_submitted": 18360,
+          "samples_completed": 17663,
+          "samples_skipped_resume": 0,
+          "samples_failed": 697,
+          "samples_abstained": 0,
+          "samples_interrupted": 0,
+          "attempts": 20586,
+          "concurrency": 256,
+          "timeout_seconds": 240.0,
+          "attempt_limit": 3,
+          "enumeration_complete": true,
+          "valid_predictions_added": 17663,
+          "attempt_status_counts": {
+            "predicted": 17663,
+            "request_error": 2921,
+            "parse_error": 2
+          }
+        },
+        "cleanup1": {
+          "state": "finished",
+          "started_at": "2026-10-13T14:54:29.095786+00:00",
+          "updated_at": "2026-10-13T15:01:21.333780+00:00",
+          "samples_seen": 18360,
+          "samples_submitted": 697,
+          "samples_completed": 18360,
+          "samples_skipped_resume": 17663,
+          "samples_failed": 0,
+          "samples_abstained": 0,
+          "samples_interrupted": 0,
+          "attempts": 700,
+          "concurrency": 64,
+          "timeout_seconds": 240.0,
+          "attempt_limit": 3,
+          "enumeration_complete": true,
+          "valid_predictions_added": 697,
+          "attempt_status_counts": {
+            "predicted": 697,
+            "request_error": 3
+          }
+        }
+      },
+      "formal_attempt_rows": 21286,
+      "final_valid_samples": 18360,
+      "final_unknown_samples": 0,
+      "final_failure_samples": 0,
+      "final_missing_samples": 0,
+      "final_coverage_by_mode": {
+        "whole": {
+          "expected": 9180,
+          "evaluated": 9180,
+          "coverage": 1.0,
+          "positive_expected": 3706,
+          "positive_evaluated": 3706,
+          "positive_coverage": 1.0,
+          "negative_expected": 5474,
+          "negative_evaluated": 5474,
+          "negative_coverage": 1.0,
+          "unknown_samples": 0,
+          "failure_samples": 0,
+          "missing_samples": 0
+        },
+        "step": {
+          "expected": 9180,
+          "evaluated": 9180,
+          "coverage": 1.0,
+          "positive_expected": 3706,
+          "positive_evaluated": 3706,
+          "positive_coverage": 1.0,
+          "negative_expected": 5474,
+          "negative_evaluated": 5474,
+          "negative_coverage": 1.0,
+          "unknown_samples": 0,
+          "failure_samples": 0,
+          "missing_samples": 0
+        }
+      },
+      "finalized_at": "2026-10-13T15:01:21.333780+00:00",
+      "observed_max_total_attempts_per_sample": 5
+    }
+  },
+  "attempt_limit_scope": "The per-run limit is 3, not a lifetime sample cap. Qwen3.5 uses an initial full pass plus at most three cleanup stages; theoretical maximum total is 12 attempts per sample, with valid samples skipped.",
+  "attempt_selection": "Latest valid safe/unsafe decision per sample in original attempt row order; unresolved unknown/errors/missing reduce coverage.",
+  "bootstrap": {
+    "method": "case-cluster percentile bootstrap",
+    "replicates": 1000,
+    "seed": 20261013,
+    "confidence": 0.95
+  },
+  "comparison_rows": 12,
+  "paired_groups": 28,
+  "paired_metric_rows": 140,
+  "statistics_reproduction": {
+    "verified": true,
+    "verification_checks": 2956,
+    "absolute_tolerance": 1e-12,
+    "old_models_baselines_and_old_pairs_exactly_unchanged": true
+  },
+  "published_records": "Anonymized labels, decisions, numeric usage and attempt metadata; trajectories and response text remain private.",
+  "agentdog_1_5_evaluated": false
+}

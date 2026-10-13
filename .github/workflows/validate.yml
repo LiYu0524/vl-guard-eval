@@ -16,3 +16,10 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Reproduce published statistics
         run: python3 scripts/reproduce.py --output-dir reproduction --nboot 1000 --seed 20261013
+      - name: Reproduce four-model comparison
+        run: >-
+          python3 scripts/reproduce.py
+          --models qwen3.8-27b deepseek-v4.1-flash qwen3.5-27b qwen3.6-27b
+          --output-dir reproduction/qwen35_qwen36
+          --reference-summary results/2026-10-13-qwen35-qwen36/summary.json
+          --nboot 1000 --seed 20261013
