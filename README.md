@@ -1,4 +1,4 @@
-# ClashBench Guard Evaluation
+# VL Guard Eval
 
 记录 ClashBench 工具调用轨迹上的离线授权风险分类评测，分别报告**整条轨迹 ACC**和**危险步骤／安全对照步骤 ACC**。
 
@@ -19,7 +19,7 @@ ACC = `(TP + TN) / 有效 safe/unsafe 判定数`。DeepSeek 保留 26 个 unknow
 
 旧 Guard 的四行是四种检测配置；它们只有相同选定调用上的历史步骤结果。各配置使用原有提示词与规则，新模型使用统一的授权风险提示词，比较结果包含提示词与决策规则的影响。
 
-**AgentDoG 1.5 尚未评测。** 新评测已按用户要求暂停。
+**AgentDoG 1.5 尚未评测，保持暂停。** Qwen 3.5 27B 与 Qwen 3.6 27B 正在使用相同冻结数据与参数评测，完成后追加结果。
 
 ## 评测口径
 
