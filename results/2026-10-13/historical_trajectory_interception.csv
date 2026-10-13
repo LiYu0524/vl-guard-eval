@@ -1,0 +1,5 @@
+method,unsafe_traces,safe_traces,early,on_time,timely_interceptions,timely_interception_recall,false_blocked_safe_traces,safe_trajectory_fpr
+TS-Guard/native_block,3706,5474,62,88,150,0.040474905558553695,45,0.008220679576178298
+TS-Guard/harmfulness_block,3706,5474,72,115,187,0.05045871559633028,50,0.009134088417975887
+TPR/high_only,3706,5474,39,56,95,0.025634106853750675,14,0.0025575447570332483
+TPR/incl_borderline,3706,5474,234,216,450,0.12142471667566108,245,0.04475703324808184

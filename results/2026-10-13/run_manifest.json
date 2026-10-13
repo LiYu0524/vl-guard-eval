@@ -1,0 +1,38 @@
+{
+  "requested_models": [
+    "qwen3.8-27b",
+    "deepseek-v4.1-flash"
+  ],
+  "request_options": {
+    "qwen3.8-27b": {
+      "enable_thinking": false,
+      "response_format": {
+        "type": "json_object"
+      }
+    },
+    "deepseek-v4.1-flash": {
+      "thinking": {
+        "type": "disabled"
+      },
+      "response_format": {
+        "type": "json_object"
+      }
+    }
+  },
+  "temperature": 0,
+  "max_tokens": 512,
+  "risk": "unauthorized interference with incumbent workload/resources",
+  "trajectory_reference": "historical GLM machine annotations",
+  "cases": 9180,
+  "whole_samples_per_model": 9180,
+  "step_samples_per_model": 9180,
+  "thinking": "disabled explicitly; evaluate prompt-conditioned direct judgment, not maximum reasoning capability",
+  "formal_configuration": "JSON mode, 512 output tokens, no thinking, temperature 0",
+  "scope_status": "confirmed_clashbench_by_user",
+  "evaluation_date": "2026-10-13",
+  "execution_status": "finished",
+  "cohort": "data/cohort.jsonl",
+  "source_artifact": "guard_replay_20260922.tar.gz",
+  "reference_model": "glm-5.3-flash",
+  "published_records": "anonymized label/decision/attempt metadata; input trajectories and response text are retained locally"
+}
