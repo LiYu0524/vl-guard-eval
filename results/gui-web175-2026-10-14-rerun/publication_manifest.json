@@ -1,0 +1,74 @@
+{
+  "schema_version": "gui-rerun-publication-v1",
+  "publication_date": "2026-10-14",
+  "records": 175,
+  "external39_excluded": true,
+  "raw_trajectories_or_answers_exported": false,
+  "reference_unchanged": true,
+  "schema_and_binary_coverage_separate": true,
+  "full_known_reference_denominator": 162,
+  "baseline_parameter_delta": {
+    "response_format": {
+      "baseline": null,
+      "rerun": {
+        "type": "json_object"
+      }
+    }
+  },
+  "secret_scan": {
+    "credential_like": 0,
+    "private_paths": 0,
+    "endpoint_urls": 0,
+    "source_fields": 0
+  },
+  "api_calls_during_export": 0,
+  "sha256_computed": false,
+  "files": [
+    {
+      "name": "REPORT.md",
+      "bytes": 3631
+    },
+    {
+      "name": "attempts.jsonl",
+      "bytes": 165279
+    },
+    {
+      "name": "records.csv",
+      "bytes": 12790
+    },
+    {
+      "name": "records.jsonl",
+      "bytes": 155628
+    },
+    {
+      "name": "reproduce.py",
+      "bytes": 8579
+    },
+    {
+      "name": "summary.json",
+      "bytes": 4333
+    },
+    {
+      "name": "verification.json",
+      "bytes": 1078
+    }
+  ],
+  "protocol_metadata": {
+    "model": "qwen3.8-27b",
+    "state": "execution_finished",
+    "workers": 6,
+    "attempts": 3,
+    "timeout_seconds": 180,
+    "max_output_tokens": 4096,
+    "temperature": 0,
+    "thinking": false,
+    "json_mode": true,
+    "requested_records": 175,
+    "recorded_events": 753,
+    "image_blocks": 583,
+    "distinct_task_texts": 46,
+    "unique_evidence_groups": 173
+  },
+  "protocol_metadata_source": "verified run_manifest.json whitelist",
+  "attempt_budget_note": "Maximum three attempts per record; retry rounds cover only records without a valid output."
+}

@@ -1,0 +1,40 @@
+{
+  "phase": "final",
+  "complete": true,
+  "passed": false,
+  "requested_records": 175,
+  "cases_with_recorded_attempt": 175,
+  "ledger_rows": 197,
+  "latest_status_counts": {
+    "success": 168,
+    "error": 7
+  },
+  "latest_prediction_counts": {
+    "safe": 154,
+    "unsafe": 14
+  },
+  "latest_failed_case_ids": [
+    "J000116",
+    "J000149",
+    "J000148",
+    "J000147",
+    "J000150",
+    "J000158",
+    "J000156"
+  ],
+  "input_reference_exact_175_id_join": true,
+  "strict_success_schema_model_finish_valid": true,
+  "all_actual_logged_request_parameters_match_manifest": true,
+  "json_response_format_enforced": true,
+  "all_logged_sanitized_inputs_equal_frozen": true,
+  "all_logged_materialized_audit_inputs_match": true,
+  "all_frozen_image_bytes_still_equal_original": true,
+  "snapshot_trailing_incomplete_line": false,
+  "execution_completed": true,
+  "integrity_passed": true,
+  "protocol_passed": true,
+  "all_175_outputs_valid": false,
+  "verification_source": "independent_run_verification.json",
+  "api_calls_during_export": 0,
+  "sha256_computed": false
+}

@@ -6,16 +6,19 @@ ClashBench 部分使用文本与工具调用记录；GUI 部分使用原用户�
 
 ## 已完成的 GUI Guard 结果
 
-2026-10-14 上传本地已完成的 Qwen3.8-27B 结果，保留两个独立批次。175 条网页轨迹的新并行复测将使用另一结果快照。
+2026-10-14 上传本地已完成的 Qwen3.8-27B 结果，并完成原 175 条网页 GUI 轨迹的 6 路并行复测；各批次保存独立快照。
 
 | 批次 | 最终有效结果 | 参考覆盖与一致性 | 全量人工 gold 准确率 |
 |---|---:|---|---|
 | ATBench-VL 原生桌面 leaf37 | 37 / 37 | 旧 mixed 参考 28 / 37；Codex 全局安全参考仅覆盖 5 / 37，其中 5 条一致 | 尚未建立 |
 | 自造网页 GUI 轨迹 | 175 / 175 | Codex 参考明确 162 条，160 条一致（98.77%）；13 条 uncertain | 尚未建立 |
+| 自造网页 GUI 轨迹并行复测 | 168 / 175 | 完整明确参考分母 154 / 162（95.06%）；其中 7 条格式失败、1 条判定分歧；13 条参考 uncertain | 尚未建立 |
 
 175 条网页记录对应 46 种任务文本、173 组唯一证据；同一归档的 39 条外部网页任务另行保存。网页批次的一条最终输出经机械格式修复，失败、重试和无 API 的格式重验均保留在匿名尝试记录中。
 
 详细口径、匿名逐例判定与离线统计复算见 [GUI 结果说明](results/gui-2026-10-14-baseline/REPORT.md)。参考一致性需要按标签作用域解释；上述覆盖率不表示模型全部判对，也不表示执行任务的成功率。
+
+本轮 175 条全部请求，保留 197 条尝试记录。7 条终态失败均缺少必需的 `limitations_zh` 字段，未补字段或计为 safe；只看明确参考且输出有效的子集，一致率为 154 / 155（99.35%）。相对旧结果新增 JSON 输出约束，因此不是参数完全相同的确定性复现。详见 [175 条复测报告](results/gui-web175-2026-10-14-rerun/REPORT.md)、[逐条结果](results/gui-web175-2026-10-14-rerun/records.csv) 和 [统计摘要](results/gui-web175-2026-10-14-rerun/summary.json)。
 
 ## ClashBench 已完成结果
 
@@ -74,9 +77,11 @@ python3 scripts/reproduce.py \
   --reference-summary results/2026-10-13-qwen35-qwen36/summary.json \
   --nboot 1000 --seed 20261013
 python3 -m unittest discover -s tests -v
+python3 results/gui-2026-10-14-baseline/reproduce.py
+python3 results/gui-web175-2026-10-14-rerun/reproduce.py
 ```
 
-前两条命令分别校验原始两模型快照和新增四模型比较，重算指标、case 聚类 bootstrap 置信区间及配对差异。输出写入 `reproduction/`。匿名 case 按原 case 的字典序编号，参考数据保留原行顺序；安全对照步骤沿用匿名化前的冻结选择，不对匿名 ID 重新应用 CRC32。
+前两条命令分别校验原始两模型快照和新增四模型比较，重算指标、case 聚类 bootstrap 置信区间及配对差异。输出写入 `reproduction/`。最后两条命令分别核对 GUI 基线与 175 条并行复测的公开统计。匿名 case 按原 case 的字典序编号，参考数据保留原行顺序；安全对照步骤沿用匿名化前的冻结选择，不对匿名 ID 重新应用 CRC32。
 
 ## 维护
 
