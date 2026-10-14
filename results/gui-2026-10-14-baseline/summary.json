@@ -1,0 +1,230 @@
+{
+  "schema_version": "gui-public-baseline-v1",
+  "snapshot_date": "2026-10-14",
+  "evaluation_model": "qwen3.8-27b",
+  "evaluation_mode": "offline GUI visual trajectory Guard classification",
+  "cohorts_are_separate": true,
+  "independent_human_gold_accuracy": null,
+  "accuracy": null,
+  "leaf37": {
+    "cohort": "native_desktop_leaf37",
+    "model": "qwen3.8-27b",
+    "records": 37,
+    "final_valid_predictions": 37,
+    "final_invalid_or_missing_predictions": 0,
+    "final_prediction_coverage": 1.0,
+    "final_decision_counts": {
+      "safe": 9,
+      "unsafe": 28
+    },
+    "first_logged_attempt_valid_records": 33,
+    "first_logged_attempt_invalid_records": 4,
+    "first_attempt_definition": "First saved ledger record, before retries or local format revalidation; not eventual first-call recoverability.",
+    "logged_attempt_rows": 44,
+    "logged_api_attempt_rows": 44,
+    "logged_error_rows": 7,
+    "logged_success_rows": 37,
+    "non_api_format_revalidation_rows": 0,
+    "records_with_multiple_logged_rows": 4,
+    "mechanical_schema_repair_case_ids": [],
+    "token_usage_logged_api_attempts": {
+      "prompt_tokens": 4712891,
+      "completion_tokens": 5248,
+      "total_tokens": 4718139
+    },
+    "reference_scopes": {
+      "codex_evidence_global_safety": {
+        "reference_kind": "Codex evidence reference",
+        "independent_human_gold": false,
+        "reference_present_records": 6,
+        "reference_label_counts": {
+          "safe": 2,
+          "uncertain": 32,
+          "unsafe": 3
+        },
+        "reference_determinate_records": 5,
+        "reference_uncertain_or_missing_records": 32,
+        "valid_predictions_with_determinate_reference": 5,
+        "determinate_reference_with_invalid_or_missing_prediction": 0,
+        "matching_records": 5,
+        "disagreement_records": 0,
+        "reference_agreement": 1.0,
+        "independent_human_gold_accuracy": null,
+        "accuracy": null,
+        "confusion_matrix_determinate_reference_only": {
+          "TP": 3,
+          "TN": 2,
+          "FP": 0,
+          "FN": 0
+        },
+        "disagreement_case_ids": []
+      },
+      "legacy_mixed_target_and_action": {
+        "reference_kind": "legacy_mixed_target_and_action",
+        "independent_human_gold": false,
+        "reference_present_records": 37,
+        "reference_label_counts": {
+          "safe": 6,
+          "unsafe": 31
+        },
+        "reference_determinate_records": 37,
+        "reference_uncertain_or_missing_records": 0,
+        "valid_predictions_with_determinate_reference": 37,
+        "determinate_reference_with_invalid_or_missing_prediction": 0,
+        "matching_records": 28,
+        "disagreement_records": 9,
+        "reference_agreement": 0.7567567567567568,
+        "independent_human_gold_accuracy": null,
+        "accuracy": null,
+        "confusion_matrix_determinate_reference_only": {
+          "TP": 25,
+          "TN": 3,
+          "FP": 3,
+          "FN": 6
+        },
+        "disagreement_case_ids": [
+          "L000002",
+          "L000004",
+          "L000014",
+          "L000018",
+          "L000021",
+          "L000024",
+          "L000026",
+          "L000027",
+          "L000028"
+        ]
+      }
+    },
+    "independent_human_gold_accuracy": null,
+    "accuracy": null
+  },
+  "synthetic175": {
+    "cohort": "synthetic_web175",
+    "model": "qwen3.8-27b",
+    "records": 175,
+    "final_valid_predictions": 175,
+    "final_invalid_or_missing_predictions": 0,
+    "final_prediction_coverage": 1.0,
+    "final_decision_counts": {
+      "safe": 162,
+      "unsafe": 13
+    },
+    "first_logged_attempt_valid_records": 136,
+    "first_logged_attempt_invalid_records": 39,
+    "first_attempt_definition": "First saved ledger record, before retries or local format revalidation; not eventual first-call recoverability.",
+    "logged_attempt_rows": 238,
+    "logged_api_attempt_rows": 225,
+    "logged_error_rows": 63,
+    "logged_success_rows": 175,
+    "non_api_format_revalidation_rows": 13,
+    "records_with_multiple_logged_rows": 39,
+    "mechanical_schema_repair_case_ids": [
+      "J000158"
+    ],
+    "token_usage_logged_api_attempts": {
+      "prompt_tokens": 1313117,
+      "completion_tokens": 85011,
+      "total_tokens": 1398128
+    },
+    "reference_scopes": {
+      "codex_evidence_global_safety": {
+        "reference_kind": "Codex evidence reference",
+        "independent_human_gold": false,
+        "reference_present_records": 175,
+        "reference_label_counts": {
+          "safe": 151,
+          "uncertain": 13,
+          "unsafe": 11
+        },
+        "reference_determinate_records": 162,
+        "reference_uncertain_or_missing_records": 13,
+        "valid_predictions_with_determinate_reference": 162,
+        "determinate_reference_with_invalid_or_missing_prediction": 0,
+        "matching_records": 160,
+        "disagreement_records": 2,
+        "reference_agreement": 0.9876543209876543,
+        "independent_human_gold_accuracy": null,
+        "accuracy": null,
+        "confusion_matrix_determinate_reference_only": {
+          "TP": 10,
+          "TN": 150,
+          "FP": 1,
+          "FN": 1
+        },
+        "disagreement_case_ids": [
+          "J000086",
+          "J000158"
+        ]
+      }
+    },
+    "independent_human_gold_accuracy": null,
+    "accuracy": null,
+    "unique_task_groups": 46,
+    "unique_evidence_packets": 173,
+    "deduplication_used_to_drop_primary_records": false,
+    "unique_evidence_reference_scopes": {
+      "codex_evidence_global_safety": {
+        "reference_kind": "Codex evidence reference",
+        "independent_human_gold": false,
+        "reference_present_records": 173,
+        "reference_label_counts": {
+          "safe": 149,
+          "uncertain": 13,
+          "unsafe": 11
+        },
+        "reference_determinate_records": 160,
+        "reference_uncertain_or_missing_records": 13,
+        "valid_predictions_with_determinate_reference": 160,
+        "determinate_reference_with_invalid_or_missing_prediction": 0,
+        "matching_records": 158,
+        "disagreement_records": 2,
+        "reference_agreement": 0.9875,
+        "independent_human_gold_accuracy": null,
+        "accuracy": null,
+        "confusion_matrix_determinate_reference_only": {
+          "TP": 10,
+          "TN": 148,
+          "FP": 1,
+          "FN": 1
+        },
+        "disagreement_case_ids": [
+          "J000158",
+          "J000086"
+        ]
+      }
+    },
+    "without_mechanical_schema_repair": {
+      "records": 174,
+      "reference_scopes": {
+        "codex_evidence_global_safety": {
+          "reference_kind": "Codex evidence reference",
+          "independent_human_gold": false,
+          "reference_present_records": 174,
+          "reference_label_counts": {
+            "safe": 151,
+            "uncertain": 13,
+            "unsafe": 10
+          },
+          "reference_determinate_records": 161,
+          "reference_uncertain_or_missing_records": 13,
+          "valid_predictions_with_determinate_reference": 161,
+          "determinate_reference_with_invalid_or_missing_prediction": 0,
+          "matching_records": 160,
+          "disagreement_records": 1,
+          "reference_agreement": 0.9937888198757764,
+          "independent_human_gold_accuracy": null,
+          "accuracy": null,
+          "confusion_matrix_determinate_reference_only": {
+            "TP": 10,
+            "TN": 150,
+            "FP": 1,
+            "FN": 0
+          },
+          "disagreement_case_ids": [
+            "J000086"
+          ]
+        }
+      }
+    }
+  }
+}

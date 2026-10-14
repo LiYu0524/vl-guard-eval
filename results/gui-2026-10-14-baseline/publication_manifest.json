@@ -1,0 +1,73 @@
+{
+  "schema_version": "gui-publication-manifest-v1",
+  "publication_date": "2026-10-14",
+  "result_snapshot": "gui-2026-10-14-baseline",
+  "upload_scope": "completed offline GUI Guard results only",
+  "public_case_ids": {
+    "leaf37": "L000001 through L000037",
+    "synthetic175": "existing anonymous J IDs; external N IDs excluded"
+  },
+  "cohort_records": {
+    "leaf37": 37,
+    "synthetic175": 175
+  },
+  "logged_attempt_rows": {
+    "leaf37": 44,
+    "synthetic175": 238
+  },
+  "reference_policy": "Frozen reference scopes retained; uncertain or missing labels remain null; no independent human-gold accuracy claim.",
+  "raw_trajectories_or_screenshots_exported": false,
+  "raw_model_answers_or_label_reasons_exported": false,
+  "private_mapping_exported": false,
+  "api_calls_during_export": 0,
+  "sha256_computed": false,
+  "secret_scan": {
+    "credential_like": 0,
+    "private_paths": 0,
+    "endpoint_urls": 0,
+    "forbidden_source_fields": 0
+  },
+  "files": [
+    {
+      "name": "REPORT.md",
+      "bytes": 3710
+    },
+    {
+      "name": "leaf37.attempts.jsonl",
+      "bytes": 34211
+    },
+    {
+      "name": "leaf37.records.csv",
+      "bytes": 3375
+    },
+    {
+      "name": "leaf37.records.jsonl",
+      "bytes": 36518
+    },
+    {
+      "name": "reproduce.py",
+      "bytes": 7341
+    },
+    {
+      "name": "summary.json",
+      "bytes": 7558
+    },
+    {
+      "name": "synthetic175.attempts.jsonl",
+      "bytes": 174532
+    },
+    {
+      "name": "synthetic175.records.csv",
+      "bytes": 11579
+    },
+    {
+      "name": "synthetic175.records.jsonl",
+      "bytes": 151528
+    },
+    {
+      "name": "verification.json",
+      "bytes": 568
+    }
+  ],
+  "verification_file": "verification.json"
+}

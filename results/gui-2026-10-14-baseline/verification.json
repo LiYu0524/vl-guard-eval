@@ -1,0 +1,18 @@
+{
+  "source_prediction_reference_join_verified": true,
+  "synthetic_exact_id_join_records": 175,
+  "external39_excluded": true,
+  "leaf_anonymous_mapping_outside_repo": true,
+  "leaf_reference_scopes_preserved": true,
+  "csv_jsonl_ids_and_decisions_match": true,
+  "reference_unknown_and_invalid_prediction_denominators_checked": true,
+  "public_reproduction_expected_summary_match": true,
+  "api_calls": 0,
+  "sha256_computed": false,
+  "secret_scan": {
+    "credential_like": 0,
+    "private_paths": 0,
+    "endpoint_urls": 0,
+    "forbidden_source_fields": 0
+  }
+}
